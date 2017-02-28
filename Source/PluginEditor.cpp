@@ -32,7 +32,11 @@ BasicDelayLAB5AudioProcessorEditor::BasicDelayLAB5AudioProcessorEditor (BasicDel
       processor(p)
 {
     //[Constructor_pre] You can add your own custom stuff here..
-    //[/Constructor_pre]
+	
+		// Starts the timer with intervals of 200ms
+		startTimer(200);
+    
+	//[/Constructor_pre]
 
 
     //[UserPreSize]
@@ -80,6 +84,12 @@ void BasicDelayLAB5AudioProcessorEditor::resized()
 
 
 //[MiscUserCode] You can add your own definitions of your custom methods or any other code here...
+
+void BasicDelayLAB5AudioProcessorEditor::timerCallback()
+{
+	//exchanges any specified data between UI elements and the plugin "ourProcessor"
+}
+
 //[/MiscUserCode]
 
 
